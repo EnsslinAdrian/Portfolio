@@ -1,0 +1,49 @@
+@import '../../../mixin.scss';
+
+h1 {
+    @include firaFont($fw: 700);
+    @include hHeadline($fs: 128px);
+
+    @media(max-width: 1050px) {
+            @include hHeadline($fs: 86px);
+    }
+
+    @media(max-width: 760px) {
+            @include firaFont($fw: 400);
+            @include hHeadline($fs: 64px);
+    }
+
+    @media(max-width: 520px) {
+            @include hHeadline($fs: 48px);
+    }
+
+    @media(max-width: 400px) {
+            @include hHeadline($fs: 38px);
+    }
+}
+
+h2 {
+    @include karlaFont();
+    @include hHeadline();
+    margin-top: 200px;
+
+    @media(max-width: 760px) {
+            @include hHeadline($fs: 24px);
+            margin-top: 200px;
+    }
+}
+
+.btn-container {
+    width: 100%;
+    @include dFlex();
+
+    button {
+        @include btn();
+
+        @media(max-width: 520px) {
+                @include btn($pd: 5px 5px, $ma: 15px, $fs: 16px);
+                width: 50%;
+                margin-top: 50px;
+        }
+    }
+}

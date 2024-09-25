@@ -1,0 +1,23 @@
+<header>
+    <nav>
+        <div class="btn-container">
+            <button (click)="changelanguage('en')" class="btn" [ngClass]="{'bg-color-btn': language}">EN</button>
+            <button (click)="changelanguage('de')" class="btn" [ngClass]="{'bg-color-btn': language == false}">DE</button>
+        </div>
+
+        <div>
+            <a href="#">{{language ? 'About me' : 'Über mich'}}</a>
+            <a href="#">{{language ? 'Skills' : 'Fähigkeiten'}}</a>
+            <a href="#">{{language ? 'Projects' : 'Projekte'}}</a>
+        </div>
+    </nav>
+
+    <img class="logo" (mousemove)="hover_logo = false" (mouseleave)="hover_logo = true" src="{{hover_logo ? logo : logo_transparent}}" alt="Logo">
+    <img class="logo-init" (mousemove)="hover_logo_init = false" (mouseleave)="hover_logo_init = true" src="{{hover_logo_init ? logo_init : logo_init_transparent}}" alt="Logo">
+    <img *ngIf="!openMenu" (click)="openMenuPopup()" class="menu-icon" (mousemove)="hover_menu_icon = false" (mouseleave)="hover_menu_icon = true" src="{{hover_menu_icon ? menu_icon : menu_icon_hover}}" alt="Logo">
+
+    <div *ngIf="openMenu" class="menu-popup-container">
+
+    </div>
+
+</header>

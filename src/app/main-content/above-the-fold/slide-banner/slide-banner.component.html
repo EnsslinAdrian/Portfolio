@@ -1,0 +1,11 @@
+<div class="sliding-container">
+    <div class="sliding-content">
+      <!-- Wiederhole die Elemente zweimal, um den Endlos-Effekt zu erzielen -->
+      <ng-container *ngFor="let item of (language ? items : itemsDE)">
+        <h3>{{ item }}</h3>
+      </ng-container>
+      <ng-container *ngFor="let item of (language ? items : itemsDE)">
+        <h3>{{ item }}</h3>
+      </ng-container>
+    </div>
+  </div>
