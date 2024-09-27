@@ -1,0 +1,6 @@
+@import '../../../../mixin.scss';
+
+.info-text-container {
+@include heightWidth($h: 100%, $w: 90%);
+background-color: rgba(139, 139, 139, 0.274);
+}

@@ -1,0 +1,6 @@
+@import '../../../../mixin.scss';
+
+.email-container {
+    @include heightWidth($h: 100%, $w: 90%);
+    background-color: rgba(160, 160, 160, 0.39);
+}

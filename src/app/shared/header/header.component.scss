@@ -68,7 +68,7 @@ header {
 
     @media(max-width: 700px) {
         display: none;
-        }
+    }
 }
 
 .logo-init {
@@ -77,32 +77,18 @@ header {
     display: none;
 
     @media(max-width: 700px) {
-    display: block;
+        display: block;
     }
 }
 
 .menu-icon {
-width: 40px;
-height: 30px;
-object-fit: cover;
-cursor: pointer;
-display: none;
+    width: 40px;
+    height: 30px;
+    object-fit: cover;
+    cursor: pointer;
+    display: none;
 
-@media(max-width: 700px) {
-    display: block;
+    @media(max-width: 700px) {
+        display: block;
     }
-}
-
-.menu-popup-container {
-    background-image: url('/images/background/bg_first.png');
-    background-position: center;
-    background-size: cover;
-    width: 238px;
-    height: 252px;
-    border-radius: 30px;
-    padding: 40px, 77px, 40px, 77px;
-    position: absolute;
-    top: 15px;
-    right: 15px;
-    z-index: 100;
 }

@@ -8,5 +8,6 @@ import { Component } from '@angular/core';
   styleUrl: './my-picture.component.scss'
 })
 export class MyPictureComponent {
+  hover_picture: boolean = false;
 
 }

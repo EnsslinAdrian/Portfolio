@@ -1,0 +1,43 @@
+@import '../../../mixin.scss';
+
+section {
+    @include heightWidth($h: 50vh, $w: 100%);
+    background-color: $bg-color;
+}
+
+h4 {
+    @include hHeadline($ta: start, $fs: 24px, $c: $text-aqua);
+    @include karlaFont($fw: 700);
+    margin-left: 50px;
+    margin-bottom: 20px;
+}
+
+h3 {
+    @include hHeadline($ta: start, $fs: 64px, $c: $text-aqua);
+    @include firaFont($fw: 700);
+    margin-left: 50px;
+    margin-bottom: 30px;
+}
+
+.info-text {
+    @include hHeadline($ta: start, $fs: 18px);
+    @include karlaFont();
+    margin-left: 50px;
+    margin-bottom: 30px;
+}
+
+.projects-container {
+    @include heightWidth($h: auto, $w: 60%);
+    @include dFlex($jc: space-between);
+    margin-left: 50px;
+}
+
+.line {
+    border-top: 1px solid $text-aqua-hover;
+    border-bottom: 1px solid $text-aqua-hover;
+}
+
+h5 {
+    @include hHeadline($ta: start);
+    margin: 20px 0;
+}

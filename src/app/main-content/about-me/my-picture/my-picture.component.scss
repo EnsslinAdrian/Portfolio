@@ -1,0 +1,27 @@
+.my-picture {
+    object-fit: cover;
+    border-radius: 30px;
+    width: 100%;
+    height: 100%;
+    z-index: 100;
+    position: relative;
+}
+
+@import '../../../../mixin.scss';
+
+.my-picture-container {
+    @include heightWidth($h: 400px, $w: 100%);
+    background-color: rgba(160, 160, 160, 0.432);
+
+    @media(max-width: 900px) {
+        @include heightWidth($h: 400px, $w: 50%);
+    }
+
+    @media(max-width: 750px) {
+        @include heightWidth($h: 400px, $w: 80%);
+    }
+
+    @media(max-width: 420px) {
+        @include heightWidth($h: 400px, $w: 90%);
+    }
+}

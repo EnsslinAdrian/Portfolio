@@ -1,0 +1,78 @@
+@import '../../../mixin.scss';
+
+footer {
+    @include heightWidth($h: auto);
+    @include dFlex($jc: space-between);
+    background-color: $bg-color;
+    padding-top: 150px;
+    padding-bottom: 50px;
+
+    @media(max-width: 650px) {
+        flex-direction: column;
+        @include dFlex($jc: center);
+    }
+}
+
+.logo-container {
+    margin-left: 50px;
+    @include dFlex($ai: start);
+    flex-direction: column;
+
+    @media(max-width: 650px) {
+        margin-left: 0;
+        @include dFlex($ai: center);
+    }
+
+    img {
+        @include heightWidth($h: 70px, $w: 170px);
+        object-fit: cover;
+        margin-bottom: 30px;
+    }
+
+    p {
+        @include hHeadline($fs: 16px);
+        margin-bottom: 10px;
+
+        @media(max-width: 650px) {
+            @include hHeadline($fs: 16px);
+            letter-spacing: 5px;
+        }   
+    }
+}
+
+h6 {
+    @include hHeadline($fs: 18px, $c: $text-aqua);
+
+    @media(max-width: 650px) {
+        display: none;
+    }
+}
+
+.navagiation-container {
+    @include dFlex($ai: start);
+    flex-direction: column;
+    margin-right: 50px;
+
+    @media(max-width: 650px) {
+        @include dFlex($ai: center);
+        margin-right: 0;
+        margin-top: 20px;
+    }
+
+    a {
+        @include aLinks($fs: 16px);
+        margin-bottom: 10px;
+        letter-spacing: 3px;
+    }
+}
+
+h5 {
+    @include hHeadline($fs: 18px, $c: $text-aqua);
+    display: none;
+
+    @media(max-width: 650px) {
+        display: block;
+        margin-top: 20px;
+        letter-spacing: 5px;
+    }
+}

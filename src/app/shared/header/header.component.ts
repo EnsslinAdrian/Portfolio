@@ -1,12 +1,13 @@
 import { CommonModule } from '@angular/common';
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { VariablenService } from '../../../services/variablen.service';
+import { MenuPopupComponent } from "./menu-popup/menu-popup.component";
 
 
 @Component({
   selector: 'app-header',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, MenuPopupComponent],
   templateUrl: './header.component.html',
   styleUrl: './header.component.scss'
 })
@@ -25,7 +26,8 @@ export class HeaderComponent implements OnInit {
   hover_menu_icon: boolean = true;
 
   language: boolean = true;
-  openMenu: boolean = false;
+
+  @Input() openMenu: boolean = false;
 
   constructor(private service: VariablenService) { }
 
@@ -45,6 +47,7 @@ export class HeaderComponent implements OnInit {
 
   openMenuPopup() {
     this.openMenu = true;
+    this.hover_menu_icon = true;
   }
 
 }

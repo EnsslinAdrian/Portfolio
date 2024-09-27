@@ -1,0 +1,27 @@
+@import '../../../../mixin.scss';
+
+.skills-headline-container {
+    @include heightWidth($h: auto, $w: 100%);
+    background-color: rgba(160, 160, 160, 0.432);
+
+    @media(max-width: 750px) {
+        @include heightWidth($h: auto, $w: 80%);
+    }
+
+    @media(max-width: 420px) {
+        @include heightWidth($h: auto, $w: 90%);
+    }
+}
+
+.skill-text-container {
+    background-color: rgba(160, 160, 160, 0.432);
+    @include heightWidth($h: 400px, $w: 100%);
+
+    @media(max-width: 750px) {
+        @include heightWidth($h: 400px, $w: 80%);
+    }
+
+    @media(max-width: 420px) {
+        @include heightWidth($h: 400px, $w: 90%);
+    }
+}

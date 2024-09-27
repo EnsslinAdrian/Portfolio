@@ -1,0 +1,43 @@
+@import '../../../mixin.scss';
+
+section {
+    @include heightWidth($h: auto);
+    @include dFlex();
+    background: radial-gradient(22.43% 43.85% at 1.22% 52.45%, rgb(10, 65, 55) 0%, #1C1C1C 100%);
+
+    @media(max-width: 900px) {
+        flex-direction: column;
+    }
+}
+
+app-skill-text {
+    @include heightWidth($h: auto, $w: 45%);
+    padding: 50px 50px;
+
+    @media(max-width: 900px) {
+        @include heightWidth($h: auto, $w: 50%);
+        padding: 0px 0px;
+    }
+
+    @media(max-width: 750px) {
+        @include heightWidth($h: auto, $w: 100%);
+        @include dFlex();
+        flex-direction: column;
+    }
+}
+
+app-skill-icons {
+    @include heightWidth($h: auto, $w: 55%);
+    padding: 50px 50px;
+
+    @media(max-width: 900px) {
+        @include heightWidth($h: auto, $w: 50%);
+        padding: 0px 0px;
+        @include dFlex();
+        margin-bottom: 50px;
+    }
+
+    @media(max-width: 750px) {
+        @include heightWidth($h: auto, $w: 100%);
+    }
+}
