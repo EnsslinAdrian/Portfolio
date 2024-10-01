@@ -10,18 +10,38 @@
 @import '../../../../mixin.scss';
 
 .my-picture-container {
-    @include heightWidth($h: 400px, $w: 100%);
-    background-color: rgba(160, 160, 160, 0.432);
+    @include heightWidth($h: 550px, $w: 100%);
+    position: relative;
 
     @media(max-width: 900px) {
-        @include heightWidth($h: 400px, $w: 50%);
+        @include heightWidth($h: 500px, $w: 80%);
     }
 
-    @media(max-width: 750px) {
+    @media(max-width: 600px) {
         @include heightWidth($h: 400px, $w: 80%);
     }
 
     @media(max-width: 420px) {
         @include heightWidth($h: 400px, $w: 90%);
+    }
+
+    .my-picture {
+        @include heightWidth();
+        object-fit: cover;
+        object-position: center;
+
+        &:hover + .dashed-lines-image {
+            transform: translateX(-30px) translateY(30px);
+        }
+    }
+
+    .dashed-lines-image {
+        @include heightWidth();
+        position: absolute;
+        left: 0;
+        top: 0;
+        border-radius: 30px;
+        transition: all 250ms ease-in-out;
+        
     }
 }

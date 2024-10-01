@@ -9,6 +9,8 @@ import { MyStoryTextComponent } from "./my-story-text/my-story-text.component";
   templateUrl: './about-me.component.html',
   styleUrl: './about-me.component.scss'
 })
-export class AboutMeComponent {
+export class AboutMeComponent{
+
+  
 
 }

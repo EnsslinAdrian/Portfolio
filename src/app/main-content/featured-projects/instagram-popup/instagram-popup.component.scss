@@ -1,0 +1,172 @@
+@import '../../../../mixin.scss';
+
+.dialog-project-container {
+    @include heightWidth($h: 100vh, $w: 100%);
+    @include dFlex();
+    position: fixed;
+    background-color: rgba(128, 128, 128, 0.329);
+    z-index: 100;
+    left: 0;
+    top: 0px;
+}
+
+.dialog-project {
+    @include heightWidth($h: 55vh, $w: 80%);
+    @include backgorundImage($url: '/images/background/bg_first.png');
+    @include dFlex($ai: start);
+    border-radius: 30px;
+    position: absolute;
+    z-index: 999;
+    padding: 50px;
+    box-sizing: border-box;
+
+    @media(max-width: 1120px) {
+        @include heightWidth($h: 55vh, $w: 90%);
+    }
+
+    @media(max-width: 830px) {
+        @include heightWidth($h: 55vh, $w: 100%);
+    }
+
+    @media(max-width: 750px) {
+        flex-direction: column-reverse;
+        @include heightWidth($h: auto, $w: 80%);
+        padding: 20px;
+    }
+    
+    @media(max-width: 550px) {
+        @include heightWidth($h: auto, $w: 100%);
+    }
+}
+
+.info-text-container {
+    @include heightWidth($w: 50%);
+    @include dFlex($ai: space-between);
+    flex-direction: column;
+
+    @media(max-width: 750px) {
+        @include heightWidth($w: 100%);
+    }
+
+    h2 {
+        @include hHeadline($ta: start, $fs: 100px, $c: $text-aqua);
+        @include karlaFont($fw: 700);
+
+        @media(max-width: 1000px) {
+            @include hHeadline($ta: start, $fs: 72px, $c: $text-aqua);
+        }
+    }
+
+    h3 {
+        @include hHeadline($ta: start, $fs: 60px, $c: $text-white);
+        @include firaFont($fw: 700);
+
+        @media(max-width: 1000px) {
+            @include hHeadline($ta: start, $fs: 56px, $c: $text-white);
+        }
+    }
+
+    .info-text {
+        @include hHeadline($ta: start, $fs: 24px, $c: $text-aqua);
+        @include firaFont($fw: 700);
+
+        @media(max-width: 1000px) {
+            @include hHeadline($ta: start, $fs: 20px, $c: $text-aqua);
+        }
+    }
+
+    .description-text {
+        @include hHeadline($ta: start, $fs: 18px, $c: $text-white);
+        @include firaFont();
+        margin: 20px 0;
+
+        @media(max-width: 1000px) {
+            @include hHeadline($ta: start, $fs: 16px, $c: $text-white);
+            margin: 20px 0;
+        }
+    }
+}
+
+.skills-container {
+    @include dFlex($jc: start);
+    flex-wrap: wrap;
+    gap: 20px;
+
+    div {
+        @include dFlex();
+
+        img {
+            height: 30px;
+            margin-right: 10px;
+        }
+
+        p {
+            @include hHeadline($ta: start, $fs: 16px, $c: $text-white);
+            @include karlaFont();
+        }
+    }
+}
+
+.btn-container {
+
+    @media(max-width: 750px) {
+        @include heightWidth($h: 100%, $w: 100%);
+        @include dFlex($jc: space-between)
+    }
+
+    button {
+        @include btn($pd: 10px 20px, $ma: 0px, $fs: 18px);
+        margin-top: 30px;
+        margin-right: 50px;
+
+        @media(max-width: 830px) {
+            margin-right: 20px;
+        }
+
+        @media(max-width: 750px) {
+            margin-right: 0px;
+        }
+    }
+}
+
+.project-image-container {
+    @include heightWidth($h: 100%, $w: 50%);
+    @include dFlex($ai: end, $jc: space-between);
+    flex-direction: column;
+
+    @media(max-width: 750px) {
+        @include heightWidth($h: 100%, $w: 100%);
+    }
+
+    .project-image {
+        @include heightWidth($h: auto, $w: 90%);
+        object-position: center;
+        object-fit: contain;
+
+        @media(max-width: 750px) {
+            @include heightWidth($h: auto, $w: 100%);
+            margin-bottom: 20px;
+        }
+    }
+
+    .close-image {
+        cursor: pointer;
+
+        @media(max-width: 750px) {
+            margin-bottom: 20px;
+        }
+    }
+
+    button {
+        border: 0;
+        background-color: transparent;
+        font-size: 18px;
+        @include karlaFont();
+        color: $text-aqua;
+        cursor: pointer;
+
+        @media(max-width: 750px) {
+            display: none;
+        }
+    }
+}

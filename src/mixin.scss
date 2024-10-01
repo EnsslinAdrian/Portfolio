@@ -1,5 +1,6 @@
 $text-aqua: #3DCFB6;
 $text-aqua-hover: rgba(61, 207, 182, 0.5);
+$text-aqua-bg: rgba(61, 207, 182, 0.1);
 $text-white: #FFFFFF;
 $white-dark: #D9D9D9;
 $bg-color: #1C1C1C;
@@ -63,4 +64,15 @@ $bg-color: #1C1C1C;
 @mixin heightWidth($h: 100%, $w: 100%) {
     height: $h;
     width: $w;
+}
+
+@mixin border-top-bottom {
+    border-top: 1px solid $text-aqua-hover;
+    border-bottom: 1px solid $text-aqua-hover;
+}
+
+@mixin backgorundImage($url: '/images/background/bg_first.png') {
+    background-image: url($url);
+    background-position: center;
+    background-size: cover;
 }

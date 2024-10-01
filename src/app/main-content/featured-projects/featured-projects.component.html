@@ -1,18 +1,76 @@
-<section>
+<app-instagram-popup
+    [openInstagramPopup]="openInstagramPopup"
+    (closePopupEvent)="handleClosePopup()"
+    *ngIf="openInstagramPopup">
+</app-instagram-popup>
+
+<app-jet-fire-popup
+    [openJetFirePopup]="openJetFirePopup"
+    (closePopupEvent)="handleClosePopup()"
+    *ngIf="openJetFirePopup">
+</app-jet-fire-popup>
+
+<app-join-popup
+  [openJoinPopup]="openJoinPopup"
+  (closePopupEvent)="handleClosePopup()"
+  *ngIf="openJoinPopup">
+</app-join-popup>
+
+<section data-aos="fade-up">
     <h4>Portfoloio</h4>
     <h3>Featured Projects</h3>
 
     <p class="info-text">Explore a selection of my work here - Interact with projects to see my skills in action.</p>
 
-    <div class="projects-container" [ngClass]="['line']">
+<div class="show-project-container">
+
+    <div>
+    <div class="projects-container" [ngClass]="['line']" (mouseenter)="showJoin = true" (mouseleave)="showJoin = false" (click)="openProjectJoin()">
         <h5>Join</h5>
+
+        <div class="skill-container">
+            <p class="line-right">HTML</p>
+            <p class="line-right">CSS</p>
+            <p class="line-right">JavaScript</p>
+            <p>Firebase</p>
+        </div>
     </div>
 
-    <div class="projects-container">
-        <h5>Ell Pollo Loco</h5>
+    <div class="projects-container" (mouseenter)="showGame = true" (mouseleave)="showGame = false" (click)="openProjectJetFire()">
+        <h5>JetFire</h5>
+
+        <div class="skill-container">
+            <p class="line-right">HTML</p>
+            <p class="line-right">CSS</p>
+            <p>JavaScript</p>
+        </div>
     </div>
 
-    <div class="projects-container" [ngClass]="['line']">
-        <h5>DA Bubble</h5>
+    <div class="projects-container" [ngClass]="['line']" (mouseenter)="showBubble = true" (mouseleave)="showBubble = false" (click)="openProjectInstagram()">
+        <h5>Instagram</h5>
+
+        <div class="skill-container">
+            <p class="line-right">HTML</p>
+            <p class="line-right">CSS</p>
+            <p>JavaScript</p>
+        </div>
     </div>
+</div>
+
+<div *ngIf="showJoin" class="project-image-container" style="top: 0;">
+<img class="project-image" src="/images/projects/join-image.png" alt="Join">
+<img class="dashed-line" src="/images/projects/Capa_1 (2).png" alt="Dashed Lines">
+</div>
+
+<div *ngIf="showGame" class="project-image-container" style="top: 32%;">
+<img class="project-image" src="/images/projects/jetFire.png" alt="JetFire">
+<img class="dashed-line" src="/images/projects/Capa_1 (2).png" alt="Dashed Lines">
+</div>
+
+<div *ngIf="showBubble" class="project-image-container" style="bottom: -90px;">
+    <img class="project-image" src="/images/projects/instagram.png" alt="instagram">
+    <img class="dashed-line" src="/images/projects/Capa_1 (2).png" alt="Dashed Lines">
+</div>
+
+</div>
 </section>

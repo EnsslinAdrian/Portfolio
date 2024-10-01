@@ -1,0 +1,39 @@
+<div class="dialog-project-container">
+    <div class="dialog-project">
+
+        <div class="info-text-container">
+            <h2>01</h2>
+            <h3>Join</h3>
+            <p class="info-text">{{language ? whatIsQuestionE : whatIsQuestionDe}}</p>
+            <p class="description-text">{{language ? descriptionE : descriptionDe}}</p>
+
+            <div class="skills-container">
+                <div><img src="/images/skills/skills-aqua/css.png" alt="">
+                    <p>CSS</p>
+                </div>
+                <div><img src="/images/skills/skills-aqua/html (1).png" alt="">
+                    <p>HTML</p>
+                </div>
+                <div><img src="/images/skills/skills-aqua/javascript.png" alt="">
+                    <p>Javascript</p>
+                </div>
+                <div><img src="/images/skills/skills-aqua/firebase.png" alt="">
+                    <p>Firebase</p>
+                </div>
+            </div>
+
+            <div class="btn-container">
+                <button>GitHub</button>
+                <button>{{language ? liveTestE : liveTestDe}}</button>
+            </div>
+
+        </div>
+
+        <div class="project-image-container">
+            <img (click)="closePopup()" class="close-image" src="/images/menu_icons/close_small.png" alt="">
+            <img class="project-image" src="/images/projects/join-image.png" alt="">
+            <button>{{language ? nextProjectE : nextProjectDe}} ⇾</button>
+        </div>
+
+    </div>
+</div>

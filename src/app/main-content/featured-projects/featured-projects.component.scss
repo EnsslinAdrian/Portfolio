@@ -1,43 +1,124 @@
 @import '../../../mixin.scss';
 
 section {
-    @include heightWidth($h: 50vh, $w: 100%);
+    @include heightWidth($h: auto, $w: 100%);
     background-color: $bg-color;
+    box-sizing: border-box;
+    padding: 50px 70px;
+
+    @media(max-width: 550px) {
+        padding: 50px 20px;
+    }
 }
 
 h4 {
     @include hHeadline($ta: start, $fs: 24px, $c: $text-aqua);
     @include karlaFont($fw: 700);
-    margin-left: 50px;
     margin-bottom: 20px;
 }
 
 h3 {
     @include hHeadline($ta: start, $fs: 64px, $c: $text-aqua);
     @include firaFont($fw: 700);
-    margin-left: 50px;
-    margin-bottom: 30px;
+    margin-bottom: 20px;
+
+    @media(max-width: 815px) {
+        @include hHeadline($ta: start, $fs: 54px, $c: $text-aqua);
+    }
 }
 
 .info-text {
     @include hHeadline($ta: start, $fs: 18px);
     @include karlaFont();
-    margin-left: 50px;
-    margin-bottom: 30px;
+    margin-bottom: 50px;
+}
+
+.show-project-container {
+    width: 100%;
+    position: relative;
 }
 
 .projects-container {
     @include heightWidth($h: auto, $w: 60%);
     @include dFlex($jc: space-between);
-    margin-left: 50px;
+    transition: all 200ms ease-in-out;
+    cursor: pointer;
+    padding: 20px 0;
+
+    &:hover {
+        background-color: $text-aqua-hover;
+    }
+
+    @media(max-width: 1000px) {
+        @include heightWidth($h: auto, $w: 100%);
+    }
+
+    @media(max-width: 680px) {
+        @include dFlex($jc: center, $ai: start);
+       flex-direction: column;
+    }
 }
 
 .line {
-    border-top: 1px solid $text-aqua-hover;
-    border-bottom: 1px solid $text-aqua-hover;
+    @include border-top-bottom();
 }
 
+.line-right {
+    border-right: 1px solid $text-aqua;
+}
+
+
 h5 {
-    @include hHeadline($ta: start);
-    margin: 20px 0;
+    @include hHeadline($ta: start, $fs: 24px);
+
+    @media(max-width: 680px) {
+      margin-bottom: 10px;
+    }
+}
+
+.skill-container {
+    @include dFlex($jc: start);
+    flex-wrap: wrap;
+    gap: 10px;
+
+    p {
+        @include hHeadline($fs: 18px);
+        @include karlaFont();
+        padding-right: 10px;
+    }
+}
+
+.project-image-container {
+    @include heightWidth($h: 180px, $w: 20%);
+    position: absolute;
+    right: 5%;
+
+    @media(max-width: 1500px) {
+        @include heightWidth($h: 180px, $w: 25%);
+        right: 0;
+    }
+
+    @media(max-width: 1200px) {
+        @include heightWidth($h: 180px, $w: 30%);
+        right: 0;
+    }
+
+    @media(max-width: 1000px) {
+        display: none;
+    }
+}
+
+.project-image {
+    @include heightWidth();
+    border-radius: 10px;
+    z-index: 1;
+    position: relative;
+}
+
+.dashed-line {
+    @include heightWidth();
+    position: absolute;
+    z-index: 0;
+    bottom: -15px;
+    right: -15px;
 }

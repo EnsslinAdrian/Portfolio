@@ -1,9 +1,10 @@
 @import '../../../mixin.scss';
 
 section {
-    background-color: $bg-color;
     @include heightWidth($h: auto, $w: 100%);
     display: flex;
+    padding-bottom: 50px;
+    background-color: $bg-color;
 
     @media(max-width: 900px) {
         flex-direction: column;
@@ -12,7 +13,7 @@ section {
 
 app-my-picture {
     @include heightWidth($h: auto, $w: 50%);
-    padding: 50px 50px;
+    padding: 50px 70px;
 
     @media(max-width: 900px) {
         @include heightWidth($h: auto, $w: 100%);
@@ -23,7 +24,7 @@ app-my-picture {
 
 app-my-story-text {
     @include heightWidth($h: auto, $w: 50%);
-    padding: 50px 50px;
+    padding: 50px 70px;
 
     @media(max-width: 900px) {
         @include heightWidth($h: auto, $w: 100%);

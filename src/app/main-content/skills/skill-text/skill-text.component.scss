@@ -1,8 +1,12 @@
 @import '../../../../mixin.scss';
 
-.skills-headline-container {
+.skill-text-container {
+    box-sizing: border-box;
+    background-color: $text-aqua-bg;
     @include heightWidth($h: auto, $w: 100%);
-    background-color: rgba(160, 160, 160, 0.432);
+    border-radius: 30px;
+    border: 1px solid $text-aqua;
+    padding: 20px;
 
     @media(max-width: 750px) {
         @include heightWidth($h: auto, $w: 80%);
@@ -11,17 +15,35 @@
     @media(max-width: 420px) {
         @include heightWidth($h: auto, $w: 90%);
     }
-}
 
-.skill-text-container {
-    background-color: rgba(160, 160, 160, 0.432);
-    @include heightWidth($h: 400px, $w: 100%);
-
-    @media(max-width: 750px) {
-        @include heightWidth($h: 400px, $w: 80%);
+    h3 {
+        @include hHeadline($ta: start, $fs: 64px, $c: $text-aqua);
+        @include firaFont($fw: 700);
+        margin-bottom: 10px;
     }
 
-    @media(max-width: 420px) {
-        @include heightWidth($h: 400px, $w: 90%);
+    .info-text {
+        @include hHeadline($ta: start, $fs: 18px);
+        @include karlaFont($fw: 400);
+    }
+
+    h5 {
+        @include hHeadline($ta: start, $fs: 24px);
+        @include firaFont($fw: 700);
+        margin: 20px 0;
+
+        span {
+            @include hHeadline($ta: start, $fs: 24px, $c: $text-aqua);
+        }
+    }
+
+    .contact-text {
+        @include hHeadline($ta: start, $fs: 16px);
+        @include karlaFont($fw: 400);
+    }
+
+    button {
+    @include btn($pd: 10px 20px, $ma: 0, $fs: 18px);
+    margin-top: 30px;
     }
 }

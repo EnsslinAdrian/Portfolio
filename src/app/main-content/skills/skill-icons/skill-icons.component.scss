@@ -1,33 +1,44 @@
 @import '../../../../mixin.scss';
 
 .skill-icon-container {
-    background-color: rgba(150, 150, 150, 0.363);
-    @include heightWidth($h: 400px, $w: 100%);
+    @include heightWidth($h: auto, $w: 100%);
     @include dFlex($ai: start, $jc: start);
     flex-wrap: wrap;
-    margin-top: 60px;
+    gap: 50px;
+    box-sizing: border-box;
+
+    @media(max-width: 1000px) {
+        gap: 30px;
+    }
 
     @media(max-width: 900px) {
         @include dFlex($ai: start, $jc: space-evenly);
         @include heightWidth($h: auto, $w: 100%);
+        margin-top: 100px;
     }
 
     @media(max-width: 750px) {
         @include heightWidth($h: auto, $w: 80%);
     }
 
+    @media(max-width: 500px) {
+        gap: 10px;
+    }
+
     @media(max-width: 420px) {
         @include heightWidth($h: auto, $w: 90%);
+        gap: 8px;
     }
 
     .icons-images {
-        @include heightWidth($h: 80px, $w: 15%);
-        background-color: rgba(128, 128, 128, 0.568);
-        margin: 25px;
+        @include heightWidth($h: auto, $w: 13%);
+        @include dFlex();
+        flex-direction: column;
+
 
         @media(max-width: 1130px) {
-            @include heightWidth($h: 80px, $w: 17%);
-            margin: 15px;
+            @include heightWidth($h: auto, $w: 13%);
+            margin: 10px;
         }
 
         @media(max-width: 490px) {
@@ -35,7 +46,22 @@
         }
 
         @media(max-width: 420px) {
-            @include heightWidth($h: 80px, $w: 30%);
+            @include heightWidth($h: 80px, $w: 20%);
+        }
+
+        img {
+            @include heightWidth($h: 80px, $w: 60%);
+            object-fit: contain;
+            transition: all 200ms ease-in-out;
+
+            &:hover {
+                transform: scale(110%);
+            }
+        }
+
+        p {
+            @include hHeadline($ta: center, $fs: 18px);
+            margin-top: 10px;
         }
     }
 }

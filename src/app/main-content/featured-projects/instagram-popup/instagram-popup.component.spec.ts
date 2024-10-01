@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { PopupProjectsComponent } from './popup-projects.component';
+import { InstagramPopupComponent } from './instagram-popup.component';
 
-describe('PopupProjectsComponent', () => {
-  let component: PopupProjectsComponent;
-  let fixture: ComponentFixture<PopupProjectsComponent>;
+describe('InstagramPopupComponent', () => {
+  let component: InstagramPopupComponent;
+  let fixture: ComponentFixture<InstagramPopupComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [PopupProjectsComponent]
+      imports: [InstagramPopupComponent]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(PopupProjectsComponent);
+    fixture = TestBed.createComponent(InstagramPopupComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

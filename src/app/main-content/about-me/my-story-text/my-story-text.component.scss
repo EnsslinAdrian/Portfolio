@@ -2,37 +2,63 @@
 
 .who-i-am-headline {
     @include heightWidth($h: auto, $w: 100%);
-    background-color: rgba(160, 160, 160, 0.432);
     margin-top: 80px;
+    margin-bottom: 20px;
 
     @media(max-width: 900px) {
-        @include heightWidth($h: auto, $w: 50%);
+        @include heightWidth($h: auto, $w: 80%);
         margin-top: 0;
     }
 
-    @media(max-width: 750px) {
+    @media(max-width: 420px) {
+        @include heightWidth($h: auto, $w: 90%);
+    }
+
+    h4 {
+        @include hHeadline($fs: 24px, $ta: start, $c: $text-aqua);
+        @include karlaFont();
+    }
+}
+
+h3 {
+    @include hHeadline($ta: start, $fs: 64px, $c: $text-aqua);
+    @include firaFont($fw: 700);
+}
+
+.info-text {
+    @include hHeadline($ta: start, $fs: 18px, $c: $text-white);
+    @include karlaFont();
+    margin-bottom: 20px;
+}
+
+.my-story-container {
+    box-sizing: border-box;
+    height: auto;
+    background-color: $text-aqua-bg;
+    border: 1px solid $text-aqua;
+    border-radius: 30px;
+    padding: 20px;
+
+    @media(max-width: 900px) {
         @include heightWidth($h: auto, $w: 80%);
     }
 
     @media(max-width: 420px) {
         @include heightWidth($h: auto, $w: 90%);
     }
-}
 
+    .info-text-container {
+        @include dFlex();
+        margin-bottom: 20px;
 
-.my-story-container {
-    @include heightWidth($h: 400px, $w: 100%);
-    background-color: rgba(160, 160, 160, 0.432);
+        img {
+        @include heightWidth($h: 32px, $w: 32px);
+        margin-right: 20px;
+        }
 
-    @media(max-width: 900px) {
-        @include heightWidth($h: 400px, $w: 50%);
-    }
-
-    @media(max-width: 750px) {
-        @include heightWidth($h: 400px, $w: 80%);
-    }
-
-    @media(max-width: 420px) {
-        @include heightWidth($h: 400px, $w: 90%);
+        p {
+            @include hHeadline($ta: start, $fs: 18px, $c: $white-dark);
+            @include karlaFont();
+        }
     }
 }
