@@ -1,3 +1,23 @@
 <div class="email-container">
+    <div class="init-container" [ngClass]="['line']">
+        <h2>What's your name?</h2>
+        <input class="inputfields" type="text" placeholder="Your name goes here">
+    </div>
+
+    <div class="init-container">
+        <h2>What's your email?</h2>
+        <input class="inputfields" type="text" placeholder="youremail@email.com">
+    </div>
+
+    <div class="init-container" [ngClass]="['line']">
+        <h2>How can I help you?</h2>
+        <input class="inputfields" type="text" placeholder="Hello Adrian, I am interested in...">
+    </div>
+
+    <div class="check-privacy">
+        <!-- <mat-checkbox class="custom-checkbox" color="warn"></mat-checkbox> -->
+        <input type="checkbox" class="custom-checkbox">
+        <p>I've read the<span>I've read the</span>and agree to the processing of my data as outlined.</p>
+    </div>
 
 </div>

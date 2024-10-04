@@ -23,6 +23,7 @@
 h3 {
     @include hHeadline($ta: start, $fs: 64px, $c: $text-aqua);
     @include firaFont($fw: 700);
+    margin-bottom: 20px;
 }
 
 .info-text {

@@ -11,6 +11,7 @@ import { Component, EventEmitter, Input, Output, Renderer2 } from '@angular/core
 export class InstagramPopupComponent {
   @Input() openInstagramPopup: boolean = false;
   @Output() closePopupEvent = new EventEmitter<void>();
+  @Output() openNextProject = new EventEmitter<void>();
 
   constructor(private renderer: Renderer2) {}
 
@@ -19,4 +20,11 @@ export class InstagramPopupComponent {
     this.renderer.removeStyle(document.body, 'overflow');
     this.closePopupEvent.emit();
   }
+
+  nextProject() {
+    this.openInstagramPopup = false;
+    this.closePopupEvent.emit();
+    this.openNextProject.emit();
+  }
+
 }

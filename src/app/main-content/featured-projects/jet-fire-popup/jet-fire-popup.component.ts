@@ -11,6 +11,7 @@ import { Component, EventEmitter, Input, Output, Renderer2 } from '@angular/core
 export class JetFirePopupComponent {
   @Input() openJetFirePopup: boolean = false;
   @Output() closePopupEvent = new EventEmitter<void>();
+  @Output() openNextProject = new EventEmitter<void>();
 
   constructor(private renderer: Renderer2) {}
 
@@ -19,4 +20,11 @@ export class JetFirePopupComponent {
     this.renderer.removeStyle(document.body, 'overflow');
     this.closePopupEvent.emit();
   }
+
+  nextProject() {
+    this.openJetFirePopup = false;
+    this.closePopupEvent.emit();
+    this.openNextProject.emit();
+  }
+
 }

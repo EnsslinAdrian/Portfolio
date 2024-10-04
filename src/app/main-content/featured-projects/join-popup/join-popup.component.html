@@ -32,7 +32,7 @@
         <div class="project-image-container">
             <img (click)="closePopup()" class="close-image" src="/images/menu_icons/close_small.png" alt="">
             <img class="project-image" src="/images/projects/join-image.png" alt="">
-            <button>{{language ? nextProjectE : nextProjectDe}} ⇾</button>
+            <button (click)="nextProject()">{{language ? nextProjectE : nextProjectDe}} ⇾</button>
         </div>
 
     </div>

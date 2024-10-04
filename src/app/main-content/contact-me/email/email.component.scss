@@ -2,5 +2,86 @@
 
 .email-container {
     @include heightWidth($h: 100%, $w: 90%);
-    background-color: rgba(160, 160, 160, 0.39);
+}
+
+.line {
+    @include border-top-bottom($px: 3px);
+}
+
+h2 {
+    @include hHeadline($ta: start, $fs: 24px, $c: $text-aqua);
+    @include firaFont();
+    margin-bottom: 10px;
+
+    @media(max-width: 500px) {
+        @include hHeadline($ta: start, $fs: 20px, $c: $text-aqua);
+    }
+}
+
+.inputfields {
+    border: 0;
+    outline: none;
+    background-color: transparent;
+    width: 100%;
+    @include hHeadline($ta: start, $fs: 18px);
+    @include karlaFont();
+
+    &::placeholder {
+        @include hHeadline($ta: start, $fs: 18px);
+        @include karlaFont();
+    }
+}
+
+.init-container {
+    padding: 30px 0;
+}
+
+.check-privacy {
+    @include dFlex($jc: start);
+    margin-top: 20px;
+
+    .custom-checkbox {
+        appearance: none;
+        -webkit-appearance: none;
+        width: 20px;
+        height: 20px;
+        background-color: transparent;
+        border: 2px solid $text-aqua;
+        cursor: pointer;
+        margin-right: 20px;
+        display: inline-block;
+        box-sizing: border-box;
+    }
+
+    .custom-checkbox:checked {
+        background-color: $text-aqua-hover;
+        width: 20px;
+        height: 20px;
+
+        &:hover {
+            background-color: $text-aqua;
+        }
+    }
+
+    .custom-checkbox:checked::before {
+        content: '✔';
+        color: rgb(0, 0, 0);
+        display: block;
+        text-align: center;
+        line-height: 20px;
+        font-size: 16px;
+    }
+
+    p {
+        @include hHeadline($ta: start, $fs: 16px);
+        @include karlaFont();
+
+        span {
+            @include hHeadline($ta: start, $fs: 16px, $c: $text-aqua);
+            @include karlaFont();
+            margin-right: 5px;
+            margin-left: 5px;
+        }
+    }
+
 }

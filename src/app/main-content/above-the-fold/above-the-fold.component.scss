@@ -3,6 +3,7 @@
 h1 {
     @include firaFont($fw: 700);
     @include hHeadline($fs: 128px);
+    line-height: 120px; 
 
     @media(max-width: 1050px) {
             @include hHeadline($fs: 86px);

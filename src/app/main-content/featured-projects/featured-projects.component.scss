@@ -21,9 +21,11 @@ h3 {
     @include hHeadline($ta: start, $fs: 64px, $c: $text-aqua);
     @include firaFont($fw: 700);
     margin-bottom: 20px;
+    line-height: 56px;
 
     @media(max-width: 815px) {
         @include hHeadline($ta: start, $fs: 54px, $c: $text-aqua);
+        margin-bottom: 20px;
     }
 }
 

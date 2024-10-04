@@ -1,18 +1,21 @@
 <app-instagram-popup
     [openInstagramPopup]="openInstagramPopup"
     (closePopupEvent)="handleClosePopup()"
+    (openNextProject)="openJoin()"
     *ngIf="openInstagramPopup">
 </app-instagram-popup>
 
 <app-jet-fire-popup
     [openJetFirePopup]="openJetFirePopup"
     (closePopupEvent)="handleClosePopup()"
+    (openNextProject)="openInstagram()"
     *ngIf="openJetFirePopup">
 </app-jet-fire-popup>
 
 <app-join-popup
   [openJoinPopup]="openJoinPopup"
   (closePopupEvent)="handleClosePopup()"
+  (openNextProject)="openJetFire()"
   *ngIf="openJoinPopup">
 </app-join-popup>
 

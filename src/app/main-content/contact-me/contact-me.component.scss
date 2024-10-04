@@ -1,7 +1,7 @@
 @import '../../../mixin.scss';
 
 section {
-    @include heightWidth($h: 50vh);
+    @include heightWidth($h: auto);
     background-color: $bg-color;
     display: flex;
 

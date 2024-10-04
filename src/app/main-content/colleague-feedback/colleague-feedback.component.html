@@ -1,9 +1,25 @@
-<section>
+<section data-aos="fade-up">
     <h3>What my colleagues say about me</h3>
-
+  
     <div class="feedback-container">
-        <div class="feedback"></div>
-        <div class="feedback"></div>
-        <div class="feedback"></div>
+      <div class="bg-color"></div>
+      <div
+        *ngFor="let slide of slides; let i = index"
+        class="slide"
+        [ngStyle]="{ transform: getTransform(i) }"
+      >
+        <h1>Hallo{{i}}</h1>
+      </div>
     </div>
-</section>
+  
+    <div class="btn-container">
+      <button (click)="imgBack()">←</button>
+      <p
+        *ngFor="let slide of slides; let i = index"
+        [style.color]="getPointColor(i)"
+      >
+        •
+      </p>
+      <button (click)="imgForward()">→</button>
+    </div>
+  </section>

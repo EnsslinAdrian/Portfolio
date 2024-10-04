@@ -12,6 +12,8 @@ import { VariablenService } from '../../../../services/variablen.service';
 export class JoinPopupComponent implements OnInit{
   @Input() openJoinPopup: boolean = false;
   @Output() closePopupEvent = new EventEmitter<void>();
+  @Output() openNextProject = new EventEmitter<void>();
+
   language: boolean = true;
 
   whatIsQuestionDe: string = 'Worum geht es in diesem Projekt?';
@@ -38,5 +40,11 @@ export class JoinPopupComponent implements OnInit{
     this.openJoinPopup = false;
     this.renderer.removeStyle(document.body, 'overflow');
     this.closePopupEvent.emit();
+  }
+
+  nextProject() {
+    this.openJoinPopup = false;
+    this.closePopupEvent.emit();
+    this.openNextProject.emit();
   }
 }

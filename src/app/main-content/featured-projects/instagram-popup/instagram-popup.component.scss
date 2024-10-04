@@ -41,7 +41,7 @@
 
 .info-text-container {
     @include heightWidth($w: 50%);
-    @include dFlex($ai: space-between);
+    @include dFlex($ai: start, $jc: space-around);
     flex-direction: column;
 
     @media(max-width: 750px) {
@@ -51,18 +51,22 @@
     h2 {
         @include hHeadline($ta: start, $fs: 100px, $c: $text-aqua);
         @include karlaFont($fw: 700);
+        margin-bottom: 30px;
 
         @media(max-width: 1000px) {
             @include hHeadline($ta: start, $fs: 72px, $c: $text-aqua);
+            margin-bottom: 10px;
         }
     }
 
     h3 {
         @include hHeadline($ta: start, $fs: 60px, $c: $text-white);
         @include firaFont($fw: 700);
+        margin-bottom: 30px;
 
         @media(max-width: 1000px) {
             @include hHeadline($ta: start, $fs: 56px, $c: $text-white);
+            margin-bottom: 30px;
         }
     }
 

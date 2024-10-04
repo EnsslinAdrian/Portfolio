@@ -66,9 +66,9 @@ $bg-color: #1C1C1C;
     width: $w;
 }
 
-@mixin border-top-bottom {
-    border-top: 1px solid $text-aqua-hover;
-    border-bottom: 1px solid $text-aqua-hover;
+@mixin border-top-bottom($px: 1px) {
+    border-top: $px solid $text-aqua-hover;
+    border-bottom: $px solid $text-aqua-hover;
 }
 
 @mixin backgorundImage($url: '/images/background/bg_first.png') {

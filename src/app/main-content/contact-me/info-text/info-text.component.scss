@@ -2,5 +2,58 @@
 
 .info-text-container {
 @include heightWidth($h: 100%, $w: 90%);
-background-color: rgba(139, 139, 139, 0.274);
+
+@media(max-width: 900px) {
+    margin-bottom: 20px;
+    }
+}
+
+h5 {
+    @include hHeadline($ta: start, $fs: 24px, $c: $text-aqua);
+    @include karlaFont();
+    margin-bottom: 20px;
+
+    @media(max-width: 500px) {
+        @include hHeadline($ta: start, $fs: 18px, $c: $text-aqua);
+    }
+}
+
+h2 {
+    @include hHeadline($ta: start, $fs: 64px, $c: $text-aqua);
+    @include firaFont($fw: 700);
+    line-height: 64px;
+    margin-bottom: 30px;
+
+    @media(max-width: 500px) {
+        @include hHeadline($ta: start, $fs: 56px, $c: $text-aqua);
+        line-height: 64px;
+        margin-bottom: 30px;
+    }
+}
+
+h6 {
+    @include hHeadline($ta: start, $fs: 24px, $c: $text-aqua);
+    @include firaFont($fw: 700);
+    margin-bottom: 10px;
+
+    @media(max-width: 500px) {
+        @include hHeadline($ta: start, $fs: 20px, $c: $text-aqua);
+        margin-bottom: 10px;
+    }
+}
+
+.contact-me-text {
+    @include hHeadline($ta: start, $fs: 16px, $c: $white-dark);
+    @include karlaFont();
+    margin-bottom: 30px;
+}
+
+.talk-text {
+    @include hHeadline($ta: start, $fs: 16px, $c: $white-dark);
+    @include karlaFont();
+
+    span {
+        @include hHeadline($ta: start, $fs: 16px, $c: $text-aqua);
+    }
+
 }

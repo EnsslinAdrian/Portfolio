@@ -45,4 +45,18 @@ export class FeaturedProjectsComponent {
     this.renderer.removeStyle(document.body, 'overflow');
   }
 
+  openJetFire() {
+    this.openJetFirePopup = true;
+  }
+
+  openInstagram() {
+    this.openInstagramPopup = true;
+  }
+
+  openJoin() {
+    this.openJoinPopup = true;
+  }
+
+  
+
 }
