@@ -1,23 +1,28 @@
 <div class="email-container">
+    <form (ngSubmit)="onSubmit(contactForm)" ngNativeValidate #contactForm="ngForm">
     <div class="init-container" [ngClass]="['line']">
-        <h2>What's your name?</h2>
-        <input class="inputfields" type="text" placeholder="Your name goes here">
+        <h2>{{language ? 'Whats your name?' : 'Wie ist Ihr Name?'}}</h2>
+        <input [(ngModel)]="contactData.name" name="name" class="inputfields" type="text" placeholder="{{language ? 'Your name goes here' : 'Ihr Name hier eingeben'}}" required>
     </div>
 
     <div class="init-container">
-        <h2>What's your email?</h2>
-        <input class="inputfields" type="text" placeholder="youremail@email.com">
+        <h2>{{language ? 'Whats your email?' : 'Wie lautet Ihre E-Mail?'}}</h2>
+        <input [(ngModel)]="contactData.email" name="email" class="inputfields" type="email" placeholder="youremail@email.com" required>
     </div>
 
     <div class="init-container" [ngClass]="['line']">
-        <h2>How can I help you?</h2>
-        <input class="inputfields" type="text" placeholder="Hello Adrian, I am interested in...">
+        <h2>{{language ? 'How can I help you?' : 'Wie kann ich Ihnen helfen?'}}</h2>
+        <input [(ngModel)]="contactData.message" name="message" class="inputfields" type="text" placeholder="{{language ? 'Hello Adrian, I am interested in...' : 'Hallo Adrian, ich bin interessiert an...'}}" required>
     </div>
 
     <div class="check-privacy">
-        <!-- <mat-checkbox class="custom-checkbox" color="warn"></mat-checkbox> -->
-        <input type="checkbox" class="custom-checkbox">
-        <p>I've read the<span>I've read the</span>and agree to the processing of my data as outlined.</p>
+        <input type="checkbox" class="custom-checkbox" required [(ngModel)]="checkbox" name="checkbox">
+        <p>{{language ? 'I`ve read the' : 'Ich habe die'}}<span>{{language ? 'privacy policy' : 'Datenschutzrichtlinie'}}</span>{{language ? 'and agree to the processing of my data as outlined.' : 'gelesen und stimme der Verarbeitung meiner Daten wie beschrieben zu.'}}</p>
     </div>
 
+    <div class="btn-container">
+        <button *ngIf="sendBtn" type="submit">{{language ? 'Say Hello ;)' : 'Sag Hallo ;)'}}</button>
+        <h4 *ngIf="sendBtn == false">Email Erfolgreich gesendet</h4>
+    </div>
+</form>
 </div>

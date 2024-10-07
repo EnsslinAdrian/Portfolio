@@ -1,16 +1,12 @@
 <div class="skill-text-container">
 
-    <h3>Skill Set</h3>
+    <h3>{{language ? 'Skill Set' : 'Skills'}}</h3>
 
-    <P class="info-text">
-        My journey has involved working on diverse projects, employing a range of frontend technologies and concepts. I
-        am open to embracing new technologies and methodologies to Continously enhance my skills and stay ahead in the
-        ever-evolving landscape of web development.
-    </P>
+    <P class="info-text">{{language ? descriptionE : descriptionDe}}</P>
 
-    <h5>You need <span>another skill?</span></h5>
+    <h5>{{language ? 'You need' : 'Sie benötigen'}}<span>{{language ? 'another skill?' : 'eine der Fähigkeiten'}}</span></h5>
 
-    <p class="contact-text">Feel free to contact me. I look forward to expanding on my previous knowledge.</p>
+    <p class="contact-text">{{language ? contactMeE : contactMeDe}}</p>
 
-    <button>Let's Talk</button>
+    <button (click)="contact()">{{language ? 'Lets Talk' : 'Lassen Sie uns sprechen'}}</button>
 </div>

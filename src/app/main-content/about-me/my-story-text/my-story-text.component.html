@@ -1,31 +1,25 @@
 <div class="who-i-am-headline">
-    <h4>Who I Am</h4>
+    <h4>{{language ? 'Who I Am' : 'Wer Ich bin'}}</h4>
 </div>
 <div class="my-story-container">
 
-    <h3>About me</h3>
+    <h3>{{language ? 'About me' : 'Über mich'}}</h3>
 
-    <p class="info-text">Hi, I’m a german speaking Frontend Developer based in Munich. Motivated by the limitless opportunities within IT,
-        I am excited about crafting visually captivating and intuitive websites and applications.
-    </p>
+    <p class="info-text">{{language ? descriptionE : descriptionDe}}</p>
 
     <div class="info-text-container">
         <img src="/images/about-me/location_on.png" alt="Location">
-        <p>Flexible in terms of working environments, I can work effectively both on-site in Munich and remotely.</p>
+        <p>{{language ? locationE : locationDe}}</p>
     </div>
 
     <div class="info-text-container">
         <img src="/images/about-me/cognition.png" alt="Cognition">
-        <p>I am open-minded and always looking for personal challenges to constantly improve my knowledge and skills.
-        </p>
+        <p>{{language ? cognitionE : cognitionDe}}</p>
     </div>
 
     <div class="info-text-container">
         <img src="/images/about-me/new_releases.png" alt="New Releases">
-        <p>In my profession, programming isn't just about writing code; it's a creative form of problem-solving. I take
-            pride in my ability to distill complex technical challenges into simple, user-friendly solutions. This way,
-            I help you achieve your goals and bring your visions to life.
-        </p>
+        <p>{{language ? newReleasesE : newReleasesDe}}</p>
     </div>
 
 </div>

@@ -19,4 +19,12 @@ ngOnInit(): void {
   })
 }
 
+contact() {
+  location.href = '#contact';
+}
+
+projects() {
+  location.href = '#projects';
+}
+
 }

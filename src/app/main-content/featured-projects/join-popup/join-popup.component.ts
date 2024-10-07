@@ -47,4 +47,12 @@ export class JoinPopupComponent implements OnInit{
     this.closePopupEvent.emit();
     this.openNextProject.emit();
   }
+
+  showJoin() {
+    location.href = 'https://join-208.developerakademie.net/Join/index.html';
+  }
+
+  gitHubJoin() {
+    location.href = 'https://github.com/EnsslinAdrian/Join';
+  }
 }

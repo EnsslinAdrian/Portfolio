@@ -1,0 +1,43 @@
+@import '../../mixin.scss';
+
+section {
+    height: 100vh;
+    width: 100%;
+    background-image: url('/images/background/bg_first.png');
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+}
+
+.max-width {
+    max-width: 1920px;
+    width: 100%;
+    position: relative;
+    }
+
+    h2 {
+    @include hHeadline($ta: center, $fs: 60px, $c: $text-aqua);
+    @include firaFont();
+    margin-top: 100px;
+
+    @media(max-width: 400px) {
+        @include hHeadline($ta: center, $fs: 40px, $c: $text-aqua);
+        margin-top: 100px;
+    }
+    }
+
+    p {
+        @include hHeadline($ta: center, $fs: 24px, $c: $text-white);
+        @include karlaFont();
+        margin-bottom: 10px;
+
+        @media(max-width: 400px) {
+            @include hHeadline($ta: center, $fs: 16px, $c: $text-white);
+        }
+    }
+
+    .margin-top {
+    margin-top: 50px;
+    font-weight: bold;
+    }

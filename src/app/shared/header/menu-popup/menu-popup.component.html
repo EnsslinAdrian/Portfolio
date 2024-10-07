@@ -2,9 +2,9 @@
     <img (click)="closeMenuPopup()" class="close-icon" (mousemove)="hover_close_icon = false" (mouseleave)="hover_close_icon = true" src="{{hover_close_icon ? menu_close_icon : menu_close_icon_hover}}" alt="Close">
 
     <div class="nav-container">
-        <a href="#">{{language ? 'About me' : 'Über mich'}}</a>
-        <a href="#">{{language ? 'Skills' : 'Fähigkeiten'}}</a>
-        <a href="#">{{language ? 'Projects' : 'Projekte'}}</a>
+        <a href="#aboutMe">{{language ? 'About me' : 'Über mich'}}</a>
+        <a href="#skills">{{language ? 'Skills' : 'Fähigkeiten'}}</a>
+        <a href="#projects">{{language ? 'Projects' : 'Projekte'}}</a>
     </div>
 
     <div class="btn-container">
