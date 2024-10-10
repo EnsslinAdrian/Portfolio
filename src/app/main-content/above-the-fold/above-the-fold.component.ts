@@ -11,6 +11,7 @@ import { SlideBannerComponent } from "./slide-banner/slide-banner.component";
 })
 export class AboveTheFoldComponent implements OnInit{
 language: boolean = true;
+
 constructor(private service: VariablenService) {}
 
 ngOnInit(): void {

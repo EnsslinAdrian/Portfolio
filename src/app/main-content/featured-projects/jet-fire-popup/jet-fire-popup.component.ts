@@ -50,11 +50,11 @@ export class JetFirePopupComponent implements OnInit{
   }
 
   showGame() {
-    location.href = 'https://adrian-ensslin.developerakademie.net/JetFire/index.html';
+    window.open('https://adrian-ensslin.developerakademie.net/JetFire/index.html', '_blank');
   }
 
   githubGame() {
-    location.href = 'https://github.com/EnsslinAdrian/JetFire';
+    window.open('https://github.com/EnsslinAdrian/JetFire', '_blank');
   }
 
 }

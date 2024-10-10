@@ -1,10 +1,11 @@
 @import '../../../mixin.scss';
 
 section {
-  @include heightWidth($h: 50vh, $w: 100%);
+  @include heightWidth($h: auto, $w: 100%);
   @include dFlex();
   background-color: $bg-color;
   padding-top: 50px;
+  margin-bottom: 50px;
   padding-bottom: 50px;
   flex-direction: column;
 }
@@ -20,6 +21,16 @@ h3 {
   @include dFlex($ai: center, $jc: space-around);
   position: relative;
   overflow-x: hidden;
+
+  @media(max-height: 950px) {
+    @include heightWidth($w: 100%, $h: 45vh);
+  }
+  @media(max-height: 630px) {
+    @include heightWidth($w: 100%, $h: 55vh);
+  }
+  @media(max-height: 530px) {
+    @include heightWidth($w: 100%, $h: 60vh);
+  }
 
   .feedback-text {
     @include hHeadline($ta: start, $fs: 14px, $c: $white-dark);
@@ -85,6 +96,11 @@ h3 {
     @include heightWidth($w: 65%, $h: auto);
     padding: 10px;
   }
+
+  @media(max-height: 450px) {
+    padding: 5px;
+    @include heightWidth($w: 75%, $h: auto);
+  }
 }
 
 .btn-container {
@@ -94,6 +110,10 @@ h3 {
 
   @media(max-width: 600px) {
   width: 50%;
+  }
+
+  @media(max-height: 450px) {
+  margin-top: 10px;
   }
 }
 

@@ -2,8 +2,10 @@
     <div class="dialog-project">
 
         <div class="info-text-container">
-            <h2>03</h2>
-            <h3>Join</h3>
+            <div class="headline">
+                <h2>03</h2>
+                <h3>Join</h3>
+            </div>
             <p class="info-text">{{language ? whatIsQuestionE : whatIsQuestionDe}}</p>
             <p class="description-text">{{language ? descriptionE : descriptionDe}}</p>
 
@@ -22,10 +24,14 @@
             <div class="btn-container">
                 <button (click)="githubInstagram()">GitHub</button>
                 <button (click)="showInstagram()">{{language ? liveTestE : liveTestDe}}</button>
+                <button class="btn-heigth" (click)="nextProject()">{{language ? nextProjectE : nextProjectDe}} ⇾</button>
+            </div>
+
+            <div class="next-project">
+                <button (click)="nextProject()">{{language ? nextProjectE : nextProjectDe}} ⇾</button>
             </div>
 
         </div>
-
         <div class="project-image-container">
             <img (click)="closePopup()" class="close-image" src="/images/menu_icons/close_small.png" alt="">
             <img class="project-image" src="/images/projects/instagram.png" alt="">

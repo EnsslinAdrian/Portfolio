@@ -3,6 +3,7 @@
 .skills-headline-container {
     background-color: $bg-color;
     padding-left: 70px;
+    margin-bottom: 10px;
 
     @media(max-width: 900px) {
         padding-left: 10%;
@@ -17,7 +18,6 @@
 section {
     @include heightWidth($h: auto);
     @include dFlex($ai: start);
-    background: radial-gradient(22.43% 43.85% at 1.22% 52.45%, rgb(10, 65, 55) 0%, #1C1C1C 100%);
     padding-bottom: 20px;
 
     @media(max-width: 900px) {

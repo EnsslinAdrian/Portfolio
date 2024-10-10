@@ -76,11 +76,16 @@ h2 {
         @include hHeadline($ta: start, $fs: 16px);
         @include karlaFont();
 
-        span {
+        a {
             @include hHeadline($ta: start, $fs: 16px, $c: $text-aqua);
             @include karlaFont();
             margin-right: 5px;
             margin-left: 5px;
+            text-decoration: none;
+
+            &:hover {
+                @include hHeadline($ta: start, $fs: 16px, $c: $text-aqua-hover);
+            }
         }
     }
 
@@ -92,6 +97,16 @@ h2 {
 
     button {
         @include btn($pd: 10px 20px, $ma: 0px, $fs: 18px);
+    }
+
+    button:disabled {
+        background-color: #292929; 
+        color: #666666; 
+        cursor: not-allowed; 
+    }
+
+    button:disabled:hover {
+        background-color: #360000; 
     }
 
     h4 {
@@ -108,4 +123,8 @@ input:-webkit-autofill:active {
     background-color: transparent !important;
     -webkit-text-fill-color: #D9D9D9 !important;
     transition: background-color 5000s ease-in-out 0s;
+}
+
+span {
+color: red;
 }

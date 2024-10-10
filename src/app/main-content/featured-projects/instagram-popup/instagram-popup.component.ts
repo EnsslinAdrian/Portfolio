@@ -49,11 +49,11 @@ export class InstagramPopupComponent implements OnInit{
   }
 
   githubInstagram() {
-    location.href = 'https://github.com/EnsslinAdrian/Instagram';
+    window.open('https://github.com/EnsslinAdrian/Instagram', '_blank');
   }
 
   showInstagram() {
-    location.href = 'https://adrian-ensslin.developerakademie.net/Instagram/index.html';
+    window.open('https://adrian-ensslin.developerakademie.net/Instagram/index.html', '_blank');
   }
 
 }

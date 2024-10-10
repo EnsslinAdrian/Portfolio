@@ -24,7 +24,7 @@ export class EmailComponent implements OnInit {
     message: '',
   }
 
-  checkbox: any = '';
+  checkbox: boolean = false;
 
   constructor(private service: VariablenService) { }
 

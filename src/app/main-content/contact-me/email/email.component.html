@@ -1,28 +1,47 @@
 <div class="email-container">
-    <form (ngSubmit)="onSubmit(contactForm)" ngNativeValidate #contactForm="ngForm">
-    <div class="init-container" [ngClass]="['line']">
-        <h2>{{language ? 'Whats your name?' : 'Wie ist Ihr Name?'}}</h2>
-        <input [(ngModel)]="contactData.name" name="name" class="inputfields" type="text" placeholder="{{language ? 'Your name goes here' : 'Ihr Name hier eingeben'}}" required>
-    </div>
+    <form (ngSubmit)="onSubmit(contactForm)" #contactForm="ngForm">
+        <div class="init-container" [ngClass]="['line']">
+            <h2>{{language ? 'Whats your name?' : 'Wie ist Ihr Name?'}}</h2>
+            <input [(ngModel)]="contactData.name" name="name" class="inputfields" type="text"
+                placeholder="{{language ? 'Your name goes here' : 'Ihr Name hier eingeben'}}" required #name="ngModel">
 
-    <div class="init-container">
-        <h2>{{language ? 'Whats your email?' : 'Wie lautet Ihre E-Mail?'}}</h2>
-        <input [(ngModel)]="contactData.email" name="email" class="inputfields" type="email" placeholder="youremail@email.com" required>
-    </div>
+            <span *ngIf="name.invalid && (name.touched || name.dirty)">{{language ? 'Please enter your name' : 'Bitte geben Sie Ihren Namen ein'}}</span>
+        </div>
 
-    <div class="init-container" [ngClass]="['line']">
-        <h2>{{language ? 'How can I help you?' : 'Wie kann ich Ihnen helfen?'}}</h2>
-        <input [(ngModel)]="contactData.message" name="message" class="inputfields" type="text" placeholder="{{language ? 'Hello Adrian, I am interested in...' : 'Hallo Adrian, ich bin interessiert an...'}}" required>
-    </div>
+        <div class="init-container">
+            <h2>{{language ? 'Whats your email?' : 'Wie lautet Ihre E-Mail?'}}</h2>
+            <input [(ngModel)]="contactData.email" name="email" class="inputfields" type="email"
+                placeholder="youremail@email.com" pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}" required
+                #email="ngModel">
 
-    <div class="check-privacy">
-        <input type="checkbox" class="custom-checkbox" required [(ngModel)]="checkbox" name="checkbox">
-        <p>{{language ? 'I`ve read the' : 'Ich habe die'}}<span>{{language ? 'privacy policy' : 'Datenschutzrichtlinie'}}</span>{{language ? 'and agree to the processing of my data as outlined.' : 'gelesen und stimme der Verarbeitung meiner Daten wie beschrieben zu.'}}</p>
-    </div>
+            <span *ngIf="email.invalid && (email.touched || email.dirty)">{{language ? 'Please enter a valid email' : 'Bitte geben Sie eine gültige E-Mail ein'}}</span>
+        </div>
 
-    <div class="btn-container">
-        <button *ngIf="sendBtn" type="submit">{{language ? 'Say Hello ;)' : 'Sag Hallo ;)'}}</button>
-        <h4 *ngIf="sendBtn == false">Email Erfolgreich gesendet</h4>
-    </div>
-</form>
+        <div class="init-container" [ngClass]="['line']">
+            <h2>{{language ? 'How can I help you?' : 'Wie kann ich Ihnen helfen?'}}</h2>
+            <input min="4" [(ngModel)]="contactData.message" name="message" class="inputfields" type="text"
+                placeholder="{{language ? 'Hello Adrian, I am interested in...' : 'Hallo Adrian, ich bin interessiert an...'}}"
+                required #message="ngModel">
+
+            <span *ngIf="message.invalid && (message.touched || message.dirty)">{{language ? 'Please enter a message' : 'Bitte geben Sie eine Nachricht ein'}}</span>
+        </div>
+
+        <div class="check-privacy">
+            <input type="checkbox" class="custom-checkbox" required [(ngModel)]="checkbox" name="checkbox" #check="ngModel">
+            <div>
+                <p>{{language ? 'I`ve read the' : 'Ich habe die'}}
+                    <a href="https://www.iubenda.com/privacy-policy/24247132" target="_blank" class="iubenda-white iubenda-noiframe iubenda-embed iubenda-noiframe " title="Datenschutzerklärung ">
+                        {{language ? 'privacy policy' : 'Datenschutzrichtlinie'}}</a>
+                        <script type="text/javascript">(function (w,d) {var loader = function () {var s = d.createElement("script"), tag = d.getElementsByTagName("script")[0]; s.src="https://cdn.iubenda.com/iubenda.js"; tag.parentNode.insertBefore(s,tag);}; if(w.addEventListener){w.addEventListener("load", loader, false);}else if(w.attachEvent){w.attachEvent("onload", loader);}else{w.onload = loader;}})(window, document);</script><br>
+                    {{language ? 'and agree to the processing of my data as outlined.' : 'gelesen und stimme der Verarbeitung meiner Daten wie beschrieben zu.'}}</p>
+        
+                <span *ngIf="check.invalid && (check.touched || check.dirty)">{{language ? 'Please confirm the privacy policy' : 'Bitte bestätigen Sie die Datenschutzrichtlinie'}}</span>
+            </div>
+        </div>
+
+        <div class="btn-container">
+            <button [disabled]="!contactForm.valid" type="submit">{{language ? 'Say Hello ;)' : 'Sag Hallo ;)'}}</button>
+        </div>
+    </form>
 </div>
+

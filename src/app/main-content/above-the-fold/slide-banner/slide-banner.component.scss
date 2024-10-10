@@ -16,6 +16,10 @@
     @media(max-width: 760px) {
         height: 53px;
     }
+
+    @media(max-height: 550px) {
+    display: none;
+    } 
 }
 
 .sliding-content {

@@ -11,6 +11,8 @@ import { VariablenService } from '../../../services/variablen.service';
 })
 export class ColleagueFeedbackComponent implements OnInit{
   language: boolean = true;
+  slides = [1, 2, 3]; 
+  currentSlide = 0; 
 
   feebackTextDe: string[] = [
     'Die Zusammenarbeit mit Adrian an Join war sehr produktiv. Seine schnelle und effiziente Programmierarbeit sowie seine Führungsqualitäten haben das Team vorangebracht. Er half bei Problemen immer sofort weiter.',
@@ -38,9 +40,6 @@ export class ColleagueFeedbackComponent implements OnInit{
     })
   }
 
-  slides = [1, 2, 3]; // Hier kannst du deine tatsächlichen Inhalte einfügen
-  currentSlide = 0; // Starten mit dem ersten Slide
-
   imgBack() {
     this.currentSlide = (this.currentSlide - 1 + this.slides.length) % this.slides.length;
   }
@@ -57,7 +56,6 @@ export class ColleagueFeedbackComponent implements OnInit{
       positionDiff -= totalSlides;
     }
 
-    // Maximal 2 Slides nach links und rechts anzeigen
     if (positionDiff === 0) {
       return 'translateX(0%) scale(1.2)';
     } else if (positionDiff === 1) {
@@ -69,7 +67,7 @@ export class ColleagueFeedbackComponent implements OnInit{
     } else if (positionDiff === -2) {
       return 'translateX(-230%)';
     } else {
-      return 'translateX(0%) scale(0)'; // Slide verstecken
+      return 'translateX(0%) scale(0)';
     }
   }
 

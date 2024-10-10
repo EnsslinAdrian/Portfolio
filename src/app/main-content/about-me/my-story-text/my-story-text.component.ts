@@ -11,11 +11,11 @@ import { VariablenService } from '../../../../services/variablen.service';
 export class MyStoryTextComponent implements OnInit{
 language: boolean = true;
 
-descriptionE: string = 'Hi, I’m a german speaking Frontend Developer based in Munich. Motivated by the limitless opportunities within IT, I am excited about crafting visually captivating and intuitive websites and applications.';
-descriptionDe: string = 'Hallo, ich bin ein deutschsprachiger Frontend-Entwickler mit Sitz in München. Motiviert von den grenzenlosen Möglichkeiten in der IT freue ich mich darauf, visuell ansprechende und intuitive Websites und Anwendungen zu gestalten.';
+descriptionE: string = 'Hi, I’m a german speaking Fullstack Developer based in Donauwörth. Motivated by the limitless opportunities within IT, I am excited about crafting visually captivating and intuitive websites and applications.';
+descriptionDe: string = 'Hallo, ich bin ein deutschsprachiger Fullstack-Entwickler mit Sitz in Donauwörth. Motiviert von den grenzenlosen Möglichkeiten in der IT freue ich mich darauf, visuell ansprechende und intuitive Websites und Anwendungen zu gestalten.';
 
 locationE: string = 'Flexible in terms of working environments, I can work effectively both on-site in Munich and remotely.';
-locationDe: string = 'Flexibel in Bezug auf Arbeitsumgebungen kann ich sowohl vor Ort in München als auch remote effektiv arbeiten.';
+locationDe: string = 'Flexibel in Bezug auf Arbeitsumgebungen kann ich sowohl vor Ort in Donauwörth als auch remote effektiv arbeiten.';
 
 cognitionE: string = 'I am open-minded and always looking for personal challenges to constantly improve my knowledge and skills.';
 cognitionDe: string = 'Ich bin aufgeschlossen und stets auf der Suche nach persönlichen Herausforderungen, um mein Wissen und meine Fähigkeiten kontinuierlich zu verbessern.';

@@ -24,6 +24,12 @@ h3 {
     @include hHeadline($ta: start, $fs: 64px, $c: $text-aqua);
     @include firaFont($fw: 700);
     margin-bottom: 20px;
+
+    @media(max-width: 500px) {
+        @include hHeadline($ta: start, $fs: 54px, $c: $text-aqua);
+        @include firaFont($fw: 700);
+        margin-bottom: 20px;
+    }
 }
 
 .info-text {
@@ -50,7 +56,7 @@ h3 {
 
     .info-text-container {
         @include dFlex();
-        margin-bottom: 20px;
+        margin-top: 20px;
 
         img {
         @include heightWidth($h: 32px, $w: 32px);

@@ -10,8 +10,8 @@ import { VariablenService } from '../../../../services/variablen.service';
   styleUrl: './slide-banner.component.scss'
 })
 export class SlideBannerComponent implements OnInit{
-  items = ['Frontend Developer', '•', 'Frontend Developer', '•', 'Frontend Developer', '•', 'Frontend Developer', '•'];
-  itemsDE = ['Frontend Entwickler', '•', 'Frontend Entwickler', '•', 'Frontend Entwickler', '•', 'Frontend Entwickler', '•'];
+  items = ['Available for Remote work', '•', 'Frontend Developer', '•', 'Based in Donauwörth', '•', 'Open to work', '•'];
+  itemsDE = ['Verfügbar für Remote-Arbeit', '•', 'Frontend-Entwickler', '•', 'Wohnhaft in Donauwörth', '•', 'Offen für neue Herausforderungen', '•'];
   language: boolean = true;
 
   constructor(private service: VariablenService) {}

@@ -21,7 +21,6 @@ skill_images: string[] = [
   '/images/skills/git.png',
   '/images/skills/api.png',
   '/images/skills/scrum.png',
-  '/images/skills/growth.png'
 ];
 
 skill_name: string[] = [
@@ -35,7 +34,6 @@ skill_name: string[] = [
   'GIT',
   'Rest-Api',
   'Srcum',
-  'Growth mindset',
 ];
 
 }

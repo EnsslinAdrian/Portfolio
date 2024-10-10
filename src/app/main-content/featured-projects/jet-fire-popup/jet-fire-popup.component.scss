@@ -33,8 +33,12 @@
         @include heightWidth($h: auto, $w: 80%);
         padding: 20px;
     }
-    
+
     @media(max-width: 550px) {
+        @include heightWidth($h: auto, $w: 100%);
+    }
+
+    @media(max-height: 480px) {
         @include heightWidth($h: auto, $w: 100%);
     }
 }
@@ -57,6 +61,12 @@
             @include hHeadline($ta: start, $fs: 72px, $c: $text-aqua);
             margin-bottom: 10px;
         }
+
+        
+    @media(max-height: 480px) {
+        @include hHeadline($ta: start, $fs: 60px, $c: $text-aqua);
+        margin-bottom: 20px;
+    }
     }
 
     h3 {
@@ -67,6 +77,11 @@
         @media(max-width: 1000px) {
             @include hHeadline($ta: start, $fs: 56px, $c: $text-white);
             margin-bottom: 30px;
+        }
+
+        @media(max-height: 480px) {
+            margin-bottom: 20px;
+            margin-left: 10px;
         }
     }
 
@@ -151,6 +166,10 @@
             @include heightWidth($h: auto, $w: 100%);
             margin-bottom: 20px;
         }
+
+        @media(max-height: 800px) {
+            display: none;
+        }
     }
 
     .close-image {
@@ -158,6 +177,10 @@
 
         @media(max-width: 750px) {
             margin-bottom: 20px;
+        }
+
+        @media(max-height: 800px) {
+            margin-bottom: 0px;
         }
     }
 
@@ -172,5 +195,46 @@
         @media(max-width: 750px) {
             display: none;
         }
+    }
+}
+
+.headline {
+
+    @media(max-height: 480px) {
+        display: flex;
+        align-items: center;
+    }
+}
+
+.next-project {
+    display: none;
+
+    @media(max-width: 750px) {
+        width: 100%;
+        display: flex;
+        justify-content: end;
+        margin-top: 15px;
+    }
+
+    @media(max-height: 420px) {
+        display: none;
+    }
+
+    button {
+        border: 0;
+        background-color: transparent;
+        font-size: 18px;
+        @include karlaFont();
+        color: $text-aqua;
+        cursor: pointer;
+    }
+
+}
+
+.btn-heigth {
+    display: none;
+
+    @media(max-height: 420px) {
+    display: block;
     }
 }

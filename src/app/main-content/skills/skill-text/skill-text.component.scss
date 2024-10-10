@@ -21,6 +21,12 @@
         @include firaFont($fw: 700);
         margin-bottom: 10px;
         line-height: 64px;
+
+        @media(max-width: 500px) {
+            @include hHeadline($ta: start, $fs: 54px, $c: $text-aqua);
+            @include firaFont($fw: 700);
+            margin-bottom: 20px;
+        }
     }
 
     .info-text {
@@ -35,6 +41,7 @@
 
         span {
             @include hHeadline($ta: start, $fs: 24px, $c: $text-aqua);
+            margin-left: 10px;
         }
     }
 

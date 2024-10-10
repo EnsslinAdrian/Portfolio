@@ -49,10 +49,11 @@ export class JoinPopupComponent implements OnInit{
   }
 
   showJoin() {
-    location.href = 'https://join-208.developerakademie.net/Join/index.html';
+    window.open('https://join-208.developerakademie.net/Join/index.html', '_blank');
+
   }
 
   gitHubJoin() {
-    location.href = 'https://github.com/EnsslinAdrian/Join';
+    window.open('https://github.com/EnsslinAdrian/Join', '_blank')
   }
 }

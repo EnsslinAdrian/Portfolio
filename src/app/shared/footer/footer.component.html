@@ -1,16 +1,16 @@
-<footer data-aos="fade-up">
+<footer>
     <div class="logo-container">
-        <img src="/images/logo/logo-adrian.png" alt="Logo">
-        <p>Web Developer</p>
-        <p>Donauwörth Germany</p>
+        <img (click)="reloadPage()" (mousemove)="hover_logo = false" (mouseleave)="hover_logo = true" src="{{hover_logo ? logo : logo_transparent}}" alt="Logo">
+        <p>{{language ? 'Web Developer' : 'Web Entwickler'}}</p>
+        <p>Donauwörth {{language ? 'Germany' : 'Deutschland'}}</p>
     </div>
 
     <h6>© Adrian Enßlin 2024</h6>
 
     <div class="navagiation-container">
-        <a href="https://github.com/EnsslinAdrian">Github</a>
-        <a href="#contact">Email</a>
-        <a href="imprint">Legal Notice</a>
+        <a href="https://github.com/EnsslinAdrian" target="_blank">Github</a>
+        <a href="mailto:ensslin.adrian@web.de">Email</a>
+        <a href="imprint">{{language ? 'Legal Notice' : 'Impressum'}}</a>
     </div>
 
     <h5>© Adrian Enßlin 2024</h5>

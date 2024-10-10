@@ -50,4 +50,8 @@ export class HeaderComponent implements OnInit {
     this.hover_menu_icon = true;
   }
 
+  reloadPage() {
+    window.location.href = '/';
+  }
+
 }
