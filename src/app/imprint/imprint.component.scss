@@ -2,19 +2,26 @@
 
 section {
     height: 100vh;
-    max-height: 1080px;
     width: 100%;
     background-image: url('/images/background/bg_first.png');
     background-position: center;
     background-size: cover;
     display: flex;
     justify-content: center;
+    max-height: 1440px;
 }
 
 .max-width {
     max-width: 1920px;
     width: 100%;
     position: relative;
+    
+    }
+
+    .footer-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
     }
 
     h2 {

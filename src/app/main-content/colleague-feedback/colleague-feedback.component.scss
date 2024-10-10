@@ -21,6 +21,7 @@ h3 {
   @include dFlex($ai: center, $jc: space-around);
   position: relative;
   overflow-x: hidden;
+  max-height: 350px;
 
   @media(max-height: 950px) {
     @include heightWidth($w: 100%, $h: 45vh);
@@ -107,6 +108,7 @@ h3 {
   @include dFlex($ai: center, $jc: space-around);
   width: 15vw;
   margin-top: 30px;
+  max-width: 300px;
 
   @media(max-width: 600px) {
   width: 50%;

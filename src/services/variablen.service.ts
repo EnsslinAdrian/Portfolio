@@ -5,12 +5,21 @@ import { BehaviorSubject } from 'rxjs';
   providedIn: 'root'
 })
 export class VariablenService {
-  private languageSource = new BehaviorSubject<boolean>(true);
-  currentLanguage = this.languageSource.asObservable();
+  private languageSource: BehaviorSubject<boolean>;
+  currentLanguage;
 
-  changeLanguage(language: boolean) {
-    this.languageSource.next(language);
+  constructor() {
+    const savedLanguage = typeof window !== 'undefined' && localStorage.getItem('language');
+
+    this.languageSource = new BehaviorSubject<boolean>(savedLanguage === 'false' ? false : true);
+    
+    this.currentLanguage = this.languageSource.asObservable();
   }
 
-  constructor() { }
+  changeLanguage(language: boolean) {
+    if (typeof window !== 'undefined') {
+      localStorage.setItem('language', language.toString());
+    }
+    this.languageSource.next(language);
+  }
 }

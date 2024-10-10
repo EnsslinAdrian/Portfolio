@@ -29,18 +29,17 @@
         <div class="check-privacy">
             <input type="checkbox" class="custom-checkbox" required [(ngModel)]="checkbox" name="checkbox" #check="ngModel">
             <div>
-                <p>{{language ? 'I`ve read the' : 'Ich habe die'}}
-                    <a href="https://www.iubenda.com/privacy-policy/24247132" target="_blank" class="iubenda-white iubenda-noiframe iubenda-embed iubenda-noiframe " title="Datenschutzerklärung ">
-                        {{language ? 'privacy policy' : 'Datenschutzrichtlinie'}}</a>
-                        <script type="text/javascript">(function (w,d) {var loader = function () {var s = d.createElement("script"), tag = d.getElementsByTagName("script")[0]; s.src="https://cdn.iubenda.com/iubenda.js"; tag.parentNode.insertBefore(s,tag);}; if(w.addEventListener){w.addEventListener("load", loader, false);}else if(w.attachEvent){w.attachEvent("onload", loader);}else{w.onload = loader;}})(window, document);</script><br>
-                    {{language ? 'and agree to the processing of my data as outlined.' : 'gelesen und stimme der Verarbeitung meiner Daten wie beschrieben zu.'}}</p>
+                <p>{{language ? "I've read the" : 'Ich habe die'}}
+                    <a href="privacy"> {{language ? 'privacy policy' : 'Datenschutzrichtlinie'}}</a>
+                    <br> {{language ? 'and agree to the processing of my data as outlined.' : 'gelesen und stimme der Verarbeitung meiner Daten wie beschrieben zu.'}}</p>
         
                 <span *ngIf="check.invalid && (check.touched || check.dirty)">{{language ? 'Please confirm the privacy policy' : 'Bitte bestätigen Sie die Datenschutzrichtlinie'}}</span>
             </div>
         </div>
 
         <div class="btn-container">
-            <button [disabled]="!contactForm.valid" type="submit">{{language ? 'Say Hello ;)' : 'Sag Hallo ;)'}}</button>
+            <button *ngIf="sendBtn" [disabled]="!contactForm.valid" type="submit">{{language ? 'Say Hello ;)' : 'Sag Hallo ;)'}}</button>
+            <h4 *ngIf="sendBtn == false">Email Erfolgreich gesendet</h4>
         </div>
     </form>
 </div>

@@ -64,7 +64,6 @@ export class EmailComponent implements OnInit {
           error: (error) => {
             console.error(error);
           },
-          complete: () => console.info('send post complete'),
         });
     }
   }

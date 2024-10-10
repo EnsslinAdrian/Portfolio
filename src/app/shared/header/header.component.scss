@@ -7,7 +7,7 @@ header {
     padding-top: 30px;
     position: relative;
 
-    @media(max-width: 860px) {
+    @media(max-width: 950px) {
         padding-left: 30px;
         padding-right: 30px;
         padding-top: 15px;
@@ -16,7 +16,7 @@ header {
     nav {
         @include dFlex();
 
-        @media(max-width: 700px) {
+        @media(max-width: 800px) {
             display: none;
         }
 
@@ -67,7 +67,7 @@ header {
     height: 90px;
     cursor: pointer;
 
-    @media(max-width: 700px) {
+    @media(max-width: 800px) {
         display: none;
     }
 }
@@ -78,7 +78,7 @@ header {
     display: none;
     cursor: pointer;
 
-    @media(max-width: 700px) {
+    @media(max-width: 800px) {
         display: block;
     }
 }
@@ -90,7 +90,7 @@ header {
     cursor: pointer;
     display: none;
 
-    @media(max-width: 700px) {
+    @media(max-width: 800px) {
         display: block;
     }
 }
